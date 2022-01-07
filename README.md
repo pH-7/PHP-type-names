@@ -16,17 +16,19 @@
 Install it easily with [Composer](https://getcomposer.org)
 
 ```bash
-composer require ph-7/data-type-names
+composer require ph-7/datatype
 ```
 
-## 🎮 Usage
+## 🤠 Example
 
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
 
 use PH7\Datatype\Type;
 
-$name = settype($_GET['id'], Type::STRING)
+$id = settype($_GET['id'], Type::STRING)
+
+$name = settype($inputName, Type::STRING)
 ```
 
 
