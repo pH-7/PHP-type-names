@@ -1,8 +1,7 @@
 <?php
 /**
- * @author      Pierre-Henry Soria <hi@ph7.me>
- * @copyright   (c) 2022, Pierre-Henry Soria
- * @license     MIT License; <https://opensource.org/licenses/MIT>
+ * (c) Pierre-Henry Soria <hi@ph7.me>
+ * MIT License <https://opensource.org/licenses/MIT>
  */
 
 declare(strict_types=1);
