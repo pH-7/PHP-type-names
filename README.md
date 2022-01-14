@@ -9,7 +9,7 @@
 
 ## ⚙️ Requirements
 
-* [PHP 7.1](https://www.php.net/releases/7_1_0.php) or newer.
+* [PHP 7.3](https://www.php.net/releases/7_3_0.php) or newer.
 
 ## ⚙️ Installation
 
