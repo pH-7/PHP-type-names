@@ -3,40 +3,36 @@ name: Tests
 on: [ push, pull_request ]
 
 jobs:
-  runs-on: ubuntu-latest
-  strategy:
-    matrix:
-      os: [ 'ubuntu-latest' ]
-      php-versions: [ '7.3', '7.4', '8.0', '8.1' ]
-      phpunit-versions: [ '9.5' ]
-      include:
-        - operating-system: ${{ matrix.os }}
-          php-versions: ${{ matrix.php-versions }}
-          phpunit-versions:
-  name: Running PHP
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+  run:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ 'ubuntu-latest' ]
+        php-versions: [ '7.3', '7.4', '8.0', '8.1' ]
+        phpunit-versions: [ '9.5' ]
+    steps:
+      - name: Checkout
+          uses: actions/checkout@v2
 
-    - name: Setup PHP
-      uses: shivammathur/setup-php@v2
-      with:
-        php-version: ${{ matrix.php-versions }}
-        tools:
-          composer:v2, phpunit: ${{ matrix.phpunit-versions }}
-          coverage: none
+          - name: Setup PHP
+            uses: shivammathur/setup-php@v2
+            with:
+              php-version: ${{ matrix.php-versions }}
+              tools:
+                composer:v2, phpunit: ${{ matrix.phpunit-versions }}
+                coverage: none
 
-    - name: Check PHP Version
-      run: php -v
+          - name: Check PHP Version
+            run: php -v
 
-    - name: Check Composer Version
-      run: composer -V
+          - name: Check Composer Version
+            run: composer -V
 
-    - name: Validate Composer json/lock
-      run: composer validate --strict
+          - name: Validate Composer json/lock
+            run: composer validate --strict
 
-    - name: Install Composer Dependencies
-      run: composer install --no-interaction --no-progress --no-suggest
+          - name: Install Composer Dependencies
+            run: composer install --no-interaction --no-progress --no-suggest
 
-    - name: Run Unit Test
-      run: composer test
+          - name: Run Unit Test
+            run: composer test
