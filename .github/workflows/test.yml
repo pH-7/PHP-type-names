@@ -31,7 +31,7 @@ jobs:
         run: composer validate --strict
 
       - name: Install Composer Dependencies
-        run: composer install --no-interaction --no-progress --no-suggest
+        run: composer install --prefer-dist --no-interaction --no-progress --no-suggest
 
       - name: Run Unit Test
         run: composer test
