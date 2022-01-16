@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [ 'ubuntu-latest' ]
+        os: [ 'ubuntu-latest', 'windows-latest', 'macos-latest' ]
         php-versions: [ '7.3', '7.4', '8.0', '8.1' ]
-        phpunit-versions: [ '9.5' ]
+        phpunit-version: [ '9.5' ]
     name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -19,7 +19,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-versions }}
-          tools: phpunit:${{ matrix.phpunit-versions }}, composer:v2
+          tools: phpunit:${{ matrix.phpunit-version }}, composer:v2
 
       - name: Check PHP Version
         run: php -v
@@ -29,6 +29,19 @@ jobs:
 
       - name: Validate Composer json/lock
         run: composer validate --strict
+
+      - name: Get Composer Cache Directory
+        id: composer-cache
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
 
       - name: Install Composer Dependencies
         run: composer install --prefer-dist --no-interaction --no-progress --no-suggest
