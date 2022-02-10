@@ -1,5 +1,8 @@
+# Dependencies
 /vendor
 composer.lock
+
+# Tests
 phpunit.xml
 .phpunit.result.cache
 
@@ -10,5 +13,5 @@ phpunit.xml
 .directory
 .DS_Store*
 
-# Ignore PHPStorm config folder
-.idea
+# IDE (PHPStorm)
+/.idea
