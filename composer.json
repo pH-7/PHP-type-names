@@ -10,7 +10,8 @@
   "authors": [
     {
       "name": "Pierre-Henry Soria",
-      "email": "hi@ph7.me"
+      "email": "hi@ph7.me",
+      "homepage": "https://github.com/pH-7"
     }
   ],
   "type": "library",
