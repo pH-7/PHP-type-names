@@ -1,6 +1,4 @@
-# PHP type names
-
-*📦 "PHP type names" contains the list of constants for the available PHP data types.*
+# PHP type names ⚡️
 
 ## 📄 Description
 
