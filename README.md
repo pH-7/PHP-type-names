@@ -13,7 +13,7 @@ Get all valid PHP type names with constants.
 
 ## ⚙️ Installation
 
-Install it easily with [Composer](https://getcomposer.org)
+Install it easily with [Composer](https://getcomposer.org/doc/00-intro.md)
 
 ```bash
 composer require ph-7/datatype
