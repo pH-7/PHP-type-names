@@ -1,5 +1,7 @@
 # PHP type names ⚡️
 
+Get all valid PHP type names with constants.
+
 ## 📄 Description
 
 *Simple library containing the list of constants for the available PHP data types. Use those constant types in your project when you need to mention a data type, use those constants instead of hardcoding them.*
