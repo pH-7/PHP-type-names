@@ -1,6 +1,6 @@
 {
   "name": "ph-7/datatype",
-  "description": "List of PHp data type constant readable names",
+  "description": "List of the available PHP data types, nicely stored into readable constant names",
   "keywords": [
     "constants",
     "php types",
