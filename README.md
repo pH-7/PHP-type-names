@@ -1,6 +1,6 @@
 # PHP type names ⚡️
 
-**Get all valid PHP type names with constants**.
+*Get all valid PHP type names with constants* ✅
 
 ## 📄 Overview
 
@@ -34,12 +34,11 @@ $name = settype($inputName, Type::STRING);
 
 ## 😋 Who cooked it?
 
-[![Pierre-Henry Soria](https://s.gravatar.com/avatar/a210fe61253c43c869d71eaed0e90149?s=200)](https://ph7.me "Pierre-Henry Soria personal website")
-
+**[Pierre-Henry Soria](https://ph7.me)**, a highly passionate, zen &amp; pragmatic software engineer 😊
 
 [![@phenrysay][twitter-image]](https://twitter.com/phenrysay) [![pH-7][github-image]](https://github.com/pH-7)
 
-**[Pierre-Henry Soria](https://ph7.me)**, a highly passionate, zen &amp; pragmatic software engineer 😊
+[![Pierre-Henry Soria](https://s.gravatar.com/avatar/a210fe61253c43c869d71eaed0e90149?s=200)](https://ph7.me "Pierre-Henry Soria personal website")
 
 
 ## 📺 The Video
