@@ -6,6 +6,9 @@
 
 namespace PH7\Datatype;
 
+/**
+ * @link https://www.w3schools.com/php/php_datatypes.asp
+ */
 final class Type
 {
     public const BOOLEAN = 'boolean';
